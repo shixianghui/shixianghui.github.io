@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Cristy">
 <meta property="og:description" content="Black—Scholes公式推导Itô 公式：若 $\mathrm{d}S = a_{t}\mathrm{d}t + \sigma_{t}\mathrm{d}W_{t}$，设 $F(S_{t},t)$ 关于 $S_{t}$ 二次可微，关于 $t$ 一次可微，则$$\mathrm{d}F_{t} = \frac{\partial F}{\partial S_{t}} \mathrm{d}S_{t}">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-15T17:35:30.816Z">
+<meta property="og:updated_time" content="2019-05-15T17:47:08.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Black—Scholes公式推导">
 <meta name="twitter:description" content="Black—Scholes公式推导Itô 公式：若 $\mathrm{d}S = a_{t}\mathrm{d}t + \sigma_{t}\mathrm{d}W_{t}$，设 $F(S_{t},t)$ 关于 $S_{t}$ 二次可微，关于 $t$ 一次可微，则$$\mathrm{d}F_{t} = \frac{\partial F}{\partial S_{t}} \mathrm{d}S_{t}">
@@ -309,7 +309,11 @@
 <li>有无风险债券，具有常利率 $r$ ，即 $\mathrm{d}B(t) = rB(t)\mathrm{d}t.$</li>
 <li>证券在 $[0,T]$ 中连续交易，市场无套利机会，股票不派红利</li>
 </ul>
-<p>先用无套利方法，构造一个投资策略组合：$\Delta$ 份股票多头和一份衍生债券空头，价值为 $\pi = \Delta S-f$ ，在 $[t,t+\mathrm{d}t]$ 时间内假定 $\Delta$ 不变，用  Itô 公式：<br>$$<br>\begin{align<em>}<br>\mathrm{d}\pi &amp;= \Delta \mathrm{d}S - \mathrm{d}f\<br>&amp;= -(\frac{\partial f}{\partial S}\mu S + \frac{\partial f}{\partial t} + \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}}\sigma^{2}S^{2} )\mathrm{d}t - \frac{\partial f}{\partial S}\sigma S\ \mathrm{d}W_{t} + \Delta\mu S\ \mathrm{d}W_{t} + \Delta\sigma S\ \mathrm{d}W_{t}<br>\end{align</em>}<br>$$<br>为使 $\mathrm{d}W_{t}$ 的系数为 $0$ ，必须且只需取 $\Delta = \frac{\partial f}{\partial S}$ ，即<strong>套期保值比率</strong>，此时组合无风险，其利率必为 $r$，故<br>$$<br>\begin{align<em>}<br>\mathrm{d}\pi &amp;= (-\frac{\partial f}{\partial t} - \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}} \sigma^{2}S^{2})\mathrm{d}t\<br>&amp;= r\pi \mathrm{d}t\<br>&amp;= r(\frac{\partial f}{\partial S}S -f)\mathrm{d}t<br>\end{align</em>}<br>$$<br>即得 $Blcak - Scholes$ 方程<br>$$<br>\frac{\partial f}{\partial t} + rS\frac{\partial f}{\partial S} + \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}}\sigma^{2}S^{2} = rf<br>$$</p>
+<p>先用无套利方法，构造一个投资策略组合：$\Delta$ 份股票多头和一份衍生债券空头，价值为 $\pi = \Delta S-f$ ，在 $[t,t+\mathrm{d}t]$ 时间内假定 $\Delta$ 不变，用  Itô 公式：</p>
+<p>\begin{align<em>}<br>\mathrm{d}\pi &amp;= \Delta \mathrm{d}S - \mathrm{d}f\<br>&amp;= -(\frac{\partial f}{\partial S}\mu S + \frac{\partial f}{\partial t} + \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}}\sigma^{2}S^{2} )\mathrm{d}t - \frac{\partial f}{\partial S}\sigma S\ \mathrm{d}W_{t} + \Delta\mu S\ \mathrm{d}W_{t} + \Delta\sigma S\ \mathrm{d}W_{t}<br>\end{align</em>}</p>
+<p>为使 $\mathrm{d}W_{t}$ 的系数为 $0$ ，必须且只需取 $\Delta = \frac{\partial f}{\partial S}$ ，即<strong>套期保值比率</strong>，此时组合无风险，其利率必为 $r$，故</p>
+<p>\begin{align<em>}<br>\mathrm{d}\pi &amp;= (-\frac{\partial f}{\partial t} - \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}} \sigma^{2}S^{2})\mathrm{d}t\<br>&amp;= r\pi \mathrm{d}t\<br>&amp;= r(\frac{\partial f}{\partial S}S -f)\mathrm{d}t<br>\end{align</em>}</p>
+<p>即得 $Blcak - Scholes$ 方程<br>$$<br>\frac{\partial f}{\partial t} + rS\frac{\partial f}{\partial S} + \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}}\sigma^{2}S^{2} = rf<br>$$</p>
 
       
     </div>
