@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="数学,教材推荐,">
+  <meta name="keywords" content="数学,金融,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="先修尤承业前三章，或做一下munkres的题更好 教材 Hatcher Algebraic Topology   经典入门教材     啰嗦是真的emm  偏向几何拓扑，不怎么代数   spanier. Algebraic Topology   经典，然而可读性较低，可能适合当手册  Tammo tom Dieck.  Algebraic Topology  (AMS)   tom dieck这个">
-<meta name="keywords" content="数学,教材推荐">
+<meta name="description" content="Black—Scholes公式推导Itô 公式：若 $\mathrm{d}S = a_{t}\mathrm{d}t + \sigma_{t}\mathrm{d}W_{t}$，设 $F(S_{t},t)$ 关于 $S_{t}$ 二次可微，关于 $t$ 一次可微，则$$\mathrm{d}F_{t} = \frac{\partial F}{\partial S_{t}} \mathrm{d}S_{t}">
+<meta name="keywords" content="数学,金融">
 <meta property="og:type" content="article">
-<meta property="og:title" content="代数拓扑">
-<meta property="og:url" content="http://yoursite.com/2019/05/13/Algebraic_Topology/index.html">
+<meta property="og:title" content="Black—Scholes公式推导">
+<meta property="og:url" content="http://yoursite.com/2019/05/16/Black_Scholes/index.html">
 <meta property="og:site_name" content="Cristy">
-<meta property="og:description" content="先修尤承业前三章，或做一下munkres的题更好 教材 Hatcher Algebraic Topology   经典入门教材     啰嗦是真的emm  偏向几何拓扑，不怎么代数   spanier. Algebraic Topology   经典，然而可读性较低，可能适合当手册  Tammo tom Dieck.  Algebraic Topology  (AMS)   tom dieck这个">
+<meta property="og:description" content="Black—Scholes公式推导Itô 公式：若 $\mathrm{d}S = a_{t}\mathrm{d}t + \sigma_{t}\mathrm{d}W_{t}$，设 $F(S_{t},t)$ 关于 $S_{t}$ 二次可微，关于 $t$ 一次可微，则$$\mathrm{d}F_{t} = \frac{\partial F}{\partial S_{t}} \mathrm{d}S_{t}">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-13T13:54:38.217Z">
+<meta property="og:updated_time" content="2019-05-15T17:35:30.816Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="代数拓扑">
-<meta name="twitter:description" content="先修尤承业前三章，或做一下munkres的题更好 教材 Hatcher Algebraic Topology   经典入门教材     啰嗦是真的emm  偏向几何拓扑，不怎么代数   spanier. Algebraic Topology   经典，然而可读性较低，可能适合当手册  Tammo tom Dieck.  Algebraic Topology  (AMS)   tom dieck这个">
+<meta name="twitter:title" content="Black—Scholes公式推导">
+<meta name="twitter:description" content="Black—Scholes公式推导Itô 公式：若 $\mathrm{d}S = a_{t}\mathrm{d}t + \sigma_{t}\mathrm{d}W_{t}$，设 $F(S_{t},t)$ 关于 $S_{t}$ 二次可微，关于 $t$ 一次可微，则$$\mathrm{d}F_{t} = \frac{\partial F}{\partial S_{t}} \mathrm{d}S_{t}">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/13/Algebraic_Topology/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/16/Black_Scholes/">
 
 
 
 
 
-  <title>代数拓扑 | Cristy</title>
+  <title>Black—Scholes公式推导 | Cristy</title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/13/Algebraic_Topology/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/Black_Scholes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="萌萌哒的小灰灰">
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">代数拓扑</h1>
+          <h1 class="post-title" itemprop="name headline">Black—Scholes公式推导</h1>
         
 
         <div class="post-meta">
@@ -262,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-13T00:00:00+08:00">
-                2019-05-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-16T00:00:00+08:00">
+                2019-05-16
               </time>
             
 
@@ -300,30 +300,16 @@
       
 
       
-        <h4 id="先修"><a href="#先修" class="headerlink" title="先修"></a>先修</h4><p>尤承业前三章，或做一下munkres的题更好</p>
-<h4 id="教材"><a href="#教材" class="headerlink" title="教材"></a>教材</h4><ul>
-<li><p><a href="http://pi.math.cornell.edu/~hatcher/AT/ATpage.html" target="_blank" rel="noopener">Hatcher Algebraic Topology</a></p>
-<p>  经典入门教材     啰嗦是真的emm  偏向几何拓扑，不怎么代数 </p>
-</li>
-<li><p>spanier. Algebraic Topology</p>
-<p>  经典，然而可读性较低，可能适合当手册</p>
-</li>
-<li><p>Tammo tom Dieck.  Algebraic Topology  (AMS)</p>
-<p>  tom dieck这个后续感觉无缝接上peter may，代数味道不错</p>
-</li>
-<li><p>Glen E. Bredon.  GTM139  Topology And Geometry </p>
-</li>
-<li><p>J.Peter May.   A Concise Course in Algebraic Topology<br>  <a href="/Users/shixianghui/Documents/数学英文教材/代数拓扑/A\ Concise\ Course\ in\ Algebraic\ Topology\ J.\ Peter\ May.pdf">A Concise Course in Algebraic Topology</a></p>
-<p>  建议学第二遍时读</p>
-</li>
+        <h3 id="Black—Scholes公式推导"><a href="#Black—Scholes公式推导" class="headerlink" title="Black—Scholes公式推导"></a>Black—Scholes公式推导</h3><p><strong>Itô</strong> <strong>公式</strong>：若 $\mathrm{d}S = a_{t}\mathrm{d}t + \sigma_{t}\mathrm{d}W_{t}$，设 $F(S_{t},t)$ 关于 $S_{t}$ 二次可微，关于 $t$ 一次可微，则<br>$$<br>\mathrm{d}F_{t} = \frac{\partial F}{\partial S_{t}} \mathrm{d}S_{t} + \frac{\partial F}{\partial t}\mathrm{d}t + \frac{1}{2}\frac{\partial^{2}F}{\partial S_{t}^{2}}\sigma_{t}^{2}\mathrm{d}t<br>$$<br>代入 $\mathrm{d}S$ 表达式得<br>$$<br>\mathrm{d}F_{t} = \Big[\frac{\partial F}{\partial t} + \frac{\partial F}{\partial S_{t}}a_{t} + \frac{1}{2}\frac{\partial^{2}F}{\partial S_{t}^{2}}\sigma_{t}^{2} \Big]\mathrm{d}t + \frac{\partial F}{\partial S_{t}}\sigma_{t}\mathrm{d}W_{t}<br>$$<br><strong>基本假定</strong>：</p>
+<ul>
+<li>无摩擦竞争市场，股票价格服从几何布朗分布</li>
 </ul>
-<h4 id="网络资源"><a href="#网络资源" class="headerlink" title="网络资源"></a>网络资源</h4><ul>
-<li><p><a href="https://pi.math.cornell.edu/~hatcher/Other/topologybooks.pdf" target="_blank" rel="noopener">A List of Recommended Books in Topology</a></p>
-<p>  Hatcher推荐书单</p>
-</li>
-<li><p><a href="https://math.stackexchange.com/questions/84409/best-algebraic-topology-book-alternative-to-allen-hatcher-free-book" target="_blank" rel="noopener">MathStackExchange</a></p>
-</li>
+<p>$$<br>\frac{\mathrm{d}S_{t}}{S_{t}} = \mu \mathrm{d}t + \sigma \mathrm{d} W_{t}<br>$$</p>
+<ul>
+<li>有无风险债券，具有常利率 $r$ ，即 $\mathrm{d}B(t) = rB(t)\mathrm{d}t.$</li>
+<li>证券在 $[0,T]$ 中连续交易，市场无套利机会，股票不派红利</li>
 </ul>
+<p>先用无套利方法，构造一个投资策略组合：$\Delta$ 份股票多头和一份衍生债券空头，价值为 $\pi = \Delta S-f$ ，在 $[t,t+\mathrm{d}t]$ 时间内假定 $\Delta$ 不变，用  Itô 公式：<br>$$<br>\begin{align<em>}<br>\mathrm{d}\pi &amp;= \Delta \mathrm{d}S - \mathrm{d}f\<br>&amp;= -(\frac{\partial f}{\partial S}\mu S + \frac{\partial f}{\partial t} + \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}}\sigma^{2}S^{2} )\mathrm{d}t - \frac{\partial f}{\partial S}\sigma S\ \mathrm{d}W_{t} + \Delta\mu S\ \mathrm{d}W_{t} + \Delta\sigma S\ \mathrm{d}W_{t}<br>\end{align</em>}<br>$$<br>为使 $\mathrm{d}W_{t}$ 的系数为 $0$ ，必须且只需取 $\Delta = \frac{\partial f}{\partial S}$ ，即<strong>套期保值比率</strong>，此时组合无风险，其利率必为 $r$，故<br>$$<br>\begin{align<em>}<br>\mathrm{d}\pi &amp;= (-\frac{\partial f}{\partial t} - \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}} \sigma^{2}S^{2})\mathrm{d}t\<br>&amp;= r\pi \mathrm{d}t\<br>&amp;= r(\frac{\partial f}{\partial S}S -f)\mathrm{d}t<br>\end{align</em>}<br>$$<br>即得 $Blcak - Scholes$ 方程<br>$$<br>\frac{\partial f}{\partial t} + rS\frac{\partial f}{\partial S} + \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}}\sigma^{2}S^{2} = rf<br>$$</p>
 
       
     </div>
@@ -343,7 +329,7 @@
           
             <a href="/tags/数学/" rel="tag"># 数学</a>
           
-            <a href="/tags/教材推荐/" rel="tag"># 教材推荐</a>
+            <a href="/tags/金融/" rel="tag"># 金融</a>
           
         </div>
       
@@ -356,8 +342,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/04/Website/" rel="next" title="《网址》">
-                <i class="fa fa-chevron-left"></i> 《网址》
+              <a href="/2019/05/13/Algebraic_Topology/" rel="next" title="代数拓扑">
+                <i class="fa fa-chevron-left"></i> 代数拓扑
               </a>
             
           </div>
@@ -365,10 +351,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/16/Black_Scholes/" rel="prev" title="Black—Scholes公式推导">
-                Black—Scholes公式推导 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -491,7 +473,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#先修"><span class="nav-number">1.</span> <span class="nav-text">先修</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#教材"><span class="nav-number">2.</span> <span class="nav-text">教材</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络资源"><span class="nav-number">3.</span> <span class="nav-text">网络资源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Black—Scholes公式推导"><span class="nav-number">1.</span> <span class="nav-text">Black—Scholes公式推导</span></a></li></ol></div>
             
 
           </div>
