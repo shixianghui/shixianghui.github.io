@@ -316,7 +316,7 @@
 </ul>
 <p>怀疑是没什么好考的。。。记得做下往年题</p>
 <p><strong>高代与几何</strong></p>
-<p>高代感觉都挺基本的，几何(只针对我这种没上过的人，学过的都是送分题)除了高考题，就二次曲线和仿射变换，翻下尤书，把题做了就好。</p>
+<p>高代感觉都挺基本的，几何(只针对我这种没上过的人，学过的话基本是送分题)除了高考题，就二次曲线和仿射变换，翻下尤书，把题做了就好。</p>
 
           
         
@@ -683,139 +683,6 @@
         
           
             
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/Black_Scholes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="萌萌哒的小灰灰">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cristy">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/16/Black_Scholes/" itemprop="url">Black—Scholes公式推导</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-16T00:00:00+08:00">
-                2019-05-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Black—Scholes公式推导"><a href="#Black—Scholes公式推导" class="headerlink" title="Black—Scholes公式推导"></a>Black—Scholes公式推导</h3><p><strong>Itô</strong> <strong>公式</strong>：若 $\mathrm{d}S = a_{t}\mathrm{d}t + \sigma_{t}\mathrm{d}W_{t}$，设 $F(S_{t},t)$ 关于 $S_{t}$ 二次可微，关于 $t$ 一次可微，则<br>$$<br>\mathrm{d}F_{t} = \frac{\partial F}{\partial S_{t}} \mathrm{d}S_{t} + \frac{\partial F}{\partial t}\mathrm{d}t + \frac{1}{2}\frac{\partial^{2}F}{\partial S_{t}^{2}}\sigma_{t}^{2}\mathrm{d}t<br>$$<br>代入 $\mathrm{d}S$ 表达式得<br>$$<br>\mathrm{d}F_{t} = \Big[\frac{\partial F}{\partial t} + \frac{\partial F}{\partial S_{t}}a_{t} + \frac{1}{2}\frac{\partial^{2}F}{\partial S_{t}^{2}}\sigma_{t}^{2} \Big]\mathrm{d}t + \frac{\partial F}{\partial S_{t}}\sigma_{t}\mathrm{d}W_{t}<br>$$<br><strong>基本假定</strong>：</p>
-<ul>
-<li>无摩擦竞争市场，股票价格服从几何布朗分布</li>
-</ul>
-<p>$$<br>\frac{\mathrm{d}S_{t}}{S_{t}} = \mu \mathrm{d}t + \sigma \mathrm{d} W_{t}<br>$$</p>
-<ul>
-<li>有无风险债券，具有常利率 $r$ ，即 $\mathrm{d}B(t) = rB(t)\mathrm{d}t.$</li>
-<li>证券在 $[0,T]$ 中连续交易，市场无套利机会，股票不派红利</li>
-</ul>
-<p>先用无套利方法，构造一个投资策略组合：$\Delta$ 份股票多头和一份衍生债券空头，价值为 $\pi = \Delta S-f$ ，在 $[t,t+\mathrm{d}t]$ 时间内假定 $\Delta$ 不变，用  Itô 公式：</p>
-<p>$$\begin{align<em>}<br>\mathrm{d}\pi &amp;= \Delta \mathrm{d}S - \mathrm{d}f\<br>&amp;= -(\frac{\partial f}{\partial S}\mu S + \frac{\partial f}{\partial t} + \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}}\sigma^{2}S^{2} )\mathrm{d}t - \frac{\partial f}{\partial S}\sigma S\ \mathrm{d}W_{t} + \Delta\mu S\ \mathrm{d}W_{t} + \Delta\sigma S\ \mathrm{d}W_{t}<br>\end{align</em>}$$</p>
-<p>为使 $\mathrm{d}W_{t}$ 的系数为 $0$ ，必须且只需取 $\Delta = \frac{\partial f}{\partial S}$ ，即<strong>套期保值比率</strong>，此时组合无风险，其利率必为 $r$，故</p>
-<p>$$\begin{align<em>}<br>\mathrm{d}\pi &amp;= (-\frac{\partial f}{\partial t} - \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}} \sigma^{2}S^{2})\mathrm{d}t\<br>&amp;= r\pi \mathrm{d}t\<br>&amp;= r(\frac{\partial f}{\partial S}S -f)\mathrm{d}t<br>\end{align</em>}$$</p>
-<p>即得 $Blcak - Scholes$ 方程<br>$$<br>\frac{\partial f}{\partial t} + rS\frac{\partial f}{\partial S} + \frac{1}{2}\frac{\partial^{2} f}{\partial S^{2}}\sigma^{2}S^{2} = rf<br>$$</p>
-
           
         
       
@@ -1341,7 +1208,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1354,7 +1221,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
