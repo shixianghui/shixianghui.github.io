@@ -22,9 +22,9 @@ repository               : "shixianghui/Xianghui-Shi.github.io"
 author:
   # Biographic information
   avatar           : "sxh.png"
-  name             : "Xianghui Shi"
+  name             : ""
   pronouns         : # example: "she/her"  
-  bio              : #""
+  bio              : ""
   location         : "Beijing, China"
   employer         : "Peking University"
   uri              : # URL
