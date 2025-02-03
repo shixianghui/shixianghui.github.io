@@ -1,0 +1,6 @@
+{
+    "latex-workshop.intellisense.citation.backend": "biblatex",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000
+}
