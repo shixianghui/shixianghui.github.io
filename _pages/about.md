@@ -32,8 +32,9 @@ Publications and Preprints
 <!--
 - X. Shi (with Jianyu Chen, Vadim Kaloshin, Zhiqiang Li, Boxi Liu), Length spectrum rigidity for Z2-symmetric Bunimovich stadia. In preparation.
 
-- X. Shi (with Zhiqiang Li), Statistics of prime orbits for expanding Thurston maps. In preparation.
 -->
+
+- X. Shi (with Zhiqiang Li), Statistics of prime orbits for expanding Thurston maps. In preparation.
 
 - X. Shi (with Ilia Binder, Qiandu He, Zhiqiang Li), Computable thermodynamic formalism. Submitted. 39 pages. ([PDF](../files/Publication/Computability/main.pdf))
 
