@@ -17,7 +17,7 @@ Contact information
 About me
 ========
 
-I'm a Hedrick Assistant Adjunct Professor in the [Department of Mathematics](https://www.math.ucla.edu) at [UCLA](https://www.ucla.edu). My faculty mentor is Professor [Mario Bonk](https://www.math.ucla.edu/~mbonk/).
+I'm a Hedrick Assistant Adjunct Professor in the [Department of Mathematics](https://www.math.ucla.edu) at [UCLA](https://www.ucla.edu).
 
 I received my PhD in Mathematics in 2026 from [Peking University](https://english.pku.edu.cn), where I was a student at the [Beijing International Center for Mathematical Research](https://bicmr.pku.edu.cn) (BICMR) under the supervision of Professor [Zhiqiang Li](https://www.math.pku.edu.cn/teachers/lizq/). I received my BS in Mathematics from Peking University in 2021.
 
